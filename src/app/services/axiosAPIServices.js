@@ -24,24 +24,3 @@ export const createCompra = async (compra) =>{
     const response = await bodoniAPI.post(`/compra`,compra);
     return response.data;
 }
-
-
-
-
-
-
-
-export const getCompra = async () =>{
-    const compra = await bodoniAPI.get(`/compra`);
-    return compra.data;
-}
-
-export const getCompraById = async (idCompra) =>{
-    const compra = await bodoniAPI.get(`/compra/${idCompra}`);
-    return compra.data;
-}
-
-export const getProductoCompradoById = async (id) =>{
-    const productoComprado = await bodoniAPI.get(`/producto_comprado/${id}`);
-    return productoComprado.data;
-}
