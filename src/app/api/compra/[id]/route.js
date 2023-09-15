@@ -1,9 +1,9 @@
-import { getProductById } from "@/api_services/productsService";
+import { getCompraById } from "@/api_services/compraService";
 import { NextResponse } from "next/server"
 
-export async function GET(idCompra) {
+export async function GET(request, {params}) {
     try {
-        const product = await getProductById(idCompra);
+        const product = await getCompraById(params.id);
         return NextResponse.json({
             message: "data retrieved successfully",
             status: 200,
